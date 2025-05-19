@@ -1,4 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, signal } from '@angular/core';
+
+
+import { IKnowledge } from '../../interface/IKnowledge.interface';
 
 @Component({
   selector: 'app-knowledge',
@@ -8,4 +11,26 @@ import { Component } from '@angular/core';
 })
 export class KnowledgeComponent {
 
+  public arrayKnowledge = signal<IKnowledge[]>([
+    {
+      src: 'assets/icons/knowledge/c.png',
+      alt: 'Ícone de conhecimento de c',
+    },
+    {
+      src: 'assets/icons/knowledge/c++.png',
+      alt: 'Ícone de conhecimento de c++',
+    },
+    {
+      src: 'assets/icons/knowledge/javascript.png',
+      alt: 'Ícone de conhecimento de javascript',
+    },
+    {
+      src: 'assets/icons/knowledge/java.png',
+      alt: 'Ícone de conhecimento de java',
+    },
+    {
+      src: 'assets/icons/knowledge/python.png',
+      alt: 'Ícone de conhecimento de python',
+    },
+  ]);
 }
